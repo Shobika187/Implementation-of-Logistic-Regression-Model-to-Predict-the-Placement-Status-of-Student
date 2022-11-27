@@ -89,11 +89,12 @@ lr.predict([[1,80,1,90,1,1,90,1,0,85,1,85]])
 ![image](https://user-images.githubusercontent.com/94508142/204136293-5a15afff-05bd-4845-b2b3-66642d8f8a5f.png)
 ## Label Encoder:
 ![image](https://user-images.githubusercontent.com/94508142/204136330-1d33be6b-8b16-4ad7-b24d-6157af5aeeb6.png)
-## X:
+
+## Y
 ![image](https://user-images.githubusercontent.com/94508142/204136347-d8dee653-d011-4866-a2ab-d8e3f9aeeeff.png)
-## Y:
-![image](https://user-images.githubusercontent.com/94508142/204136360-7af0b407-7529-4be9-9fcf-24ca0ebc9400.png)
 ## Y_prediction:
+![image](https://user-images.githubusercontent.com/94508142/204136360-7af0b407-7529-4be9-9fcf-24ca0ebc9400.png)
+## Accuracy
 ![image](https://user-images.githubusercontent.com/94508142/204136366-0769bc13-f1d0-4388-a72d-9f4d30469c01.png)
 ## Cofusion:
 ![image](https://user-images.githubusercontent.com/94508142/204136373-349bf1c1-052c-4255-83c7-557dd0dcc0b8.png)
