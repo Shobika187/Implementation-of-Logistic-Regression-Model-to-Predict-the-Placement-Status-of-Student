@@ -19,53 +19,53 @@ To write a program to implement the the Logistic Regression Model to Predict the
 ```
 ## Program:
 ```
-/*
+
 Program to implement the the Logistic Regression Model to Predict the Placement Status of Student.
 Developed by: Shobika P
 RegisterNumber:  212221230096
 
+
 import pandas as pd
-data = pd.read_csv("Placement_Data.csv")
-data.head()
+df=pd.read_csv("Placement_Data(1).csv")
+df.head()
 
-data1 = data.copy()
-data1 = data1.drop(["sl_no","salary"],axis = 1)
-data1.head()
+df1=df.copy()
+df1=df1.drop(["sl_no","salary"],axis=1)
+df1.head()
 
-data1.isnull().sum()
+df1.isnull().sum()
 
-data1.duplicated().sum()
+df1.duplicated().sum()
 
 from sklearn.preprocessing import LabelEncoder
-le = LabelEncoder()
-data1["gender"] = le.fit_transform(data1["gender"])
-data1["ssc_b"] = le.fit_transform(data1["ssc_b"])
-data1["hsc_b"] = le.fit_transform(data1["hsc_b"])
-data1["hsc_s"] = le.fit_transform(data1["hsc_s"])
-data1["degree_t"] = le.fit_transform(data1["degree_t"])
-data1["workex"] = le.fit_transform(data1["workex"])
-data1["specialisation"] = le.fit_transform(data1["specialisation"])
-data1["status"] = le.fit_transform(data1["status"])
-data1
+le=LabelEncoder()
+df1["gender"]=le.fit_transform(df1["gender"])
+df1["ssc_b"]=le.fit_transform(df1["ssc_b"])
+df1["hsc_b"]=le.fit_transform(df1["hsc_b"])
+df1["hsc_s"]=le.fit_transform(df1["hsc_s"])
+df1["degree_t"]=le.fit_transform(df1["degree_t"])
+df1["workex"]=le.fit_transform(df1["workex"])
+df1["specialisation"]=le.fit_transform(df1["specialisation"])
+df1["status"]=le.fit_transform(df1["status"])
+df1
 
-x = data1.iloc[:,:-1]
+x=df1.iloc[:,:-1]
 x
 
-y = data1["status"]
+y=df1["status"]
 y
 
 from sklearn.model_selection import train_test_split
-x_train,x_test,y_train,y_test = train_test_split(x,y,test_size = 0.2,random_state = 0)
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=0)
 
 from sklearn.linear_model import LogisticRegression
-lr = LogisticRegression(solver = "liblinear")
+lr=LogisticRegression(solver="liblinear")
 lr.fit(x_train,y_train)
-
-y_pred = lr.predict(x_test)
+y_pred=lr.predict(x_test)
 y_pred
 
 from sklearn.metrics import accuracy_score
-accuracy = accuracy_score(y_test,y_pred)
+accuracy=accuracy_score(y_test,y_pred)
 accuracy
 
 from sklearn.metrics import confusion_matrix
@@ -78,18 +78,30 @@ classification_report1
 
 lr.predict([[1,80,1,90,1,1,90,1,0,85,1,85]])
 
-*/
 ```
 
 ## Output:
-![Screenshot (135)](https://user-images.githubusercontent.com/94508142/196183164-c17a387f-3de0-4b70-a713-bebebef24d83.png)
-![Screenshot (136)](https://user-images.githubusercontent.com/94508142/196183195-7bdd416a-12e0-4d05-8ca0-044c3d3dea1d.png)
-![Screenshot (137)](https://user-images.githubusercontent.com/94508142/196183238-516e540c-dcd1-4092-a769-a24904c8e4b1.png)
-![Screenshot (138)](https://user-images.githubusercontent.com/94508142/196183273-cc5b6ec0-1b25-4665-9a40-a87cbf876bd1.png)
-![Screenshot (139)](https://user-images.githubusercontent.com/94508142/196183323-44f41777-e29e-4c45-893c-31b2f633213d.png)
-![Screenshot (140)](https://user-images.githubusercontent.com/94508142/196183370-dd88ff14-c529-46e2-9cf5-8f8253e073c0.png)
-![Screenshot (141)](https://user-images.githubusercontent.com/94508142/196183398-354a5c55-5fb4-456e-b86e-19415c9a29b2.png)
-![Screenshot (142)](https://user-images.githubusercontent.com/94508142/196183447-e904df1c-a78d-4499-9cb3-9a6395a6b1ee.png)
+## Original Data:
+![image](https://user-images.githubusercontent.com/94508142/204136255-8cb10f6a-6c74-440f-add7-a7be6008664b.png)
+## After removing:
+![image](https://user-images.githubusercontent.com/94508142/204136278-512a878a-d155-48b9-9569-b8f11edb494e.png)
+## Null Data:
+![image](https://user-images.githubusercontent.com/94508142/204136293-5a15afff-05bd-4845-b2b3-66642d8f8a5f.png)
+## Label Encoder:
+![image](https://user-images.githubusercontent.com/94508142/204136330-1d33be6b-8b16-4ad7-b24d-6157af5aeeb6.png)
+## X:
+![image](https://user-images.githubusercontent.com/94508142/204136347-d8dee653-d011-4866-a2ab-d8e3f9aeeeff.png)
+## Y:
+![image](https://user-images.githubusercontent.com/94508142/204136360-7af0b407-7529-4be9-9fcf-24ca0ebc9400.png)
+## Y_prediction:
+![image](https://user-images.githubusercontent.com/94508142/204136366-0769bc13-f1d0-4388-a72d-9f4d30469c01.png)
+## Accuracy:
+![image](https://user-images.githubusercontent.com/94508142/204136373-349bf1c1-052c-4255-83c7-557dd0dcc0b8.png)
+## Cofusion:
+![image](https://user-images.githubusercontent.com/94508142/204136392-5c88781d-6104-449c-a5ce-3ae6689cc1d4.png)
+## Classification:
+![Uploading image.png…]()
+
 
 
 
